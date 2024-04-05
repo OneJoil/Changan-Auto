@@ -1,0 +1,76 @@
+.header {
+    height: 10.6rem;
+    background-color: $color-white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+
+    &__logo-box {
+        display: flex;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    &__info {
+        display: flex;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    &__user-nav {
+        margin-left: 22.4rem;
+    }
+
+    &__info-time {
+        display: inline-flex;
+        justify-content: center;
+        color: $color-header-text;
+        margin-left: 64.7rem;
+
+        p {
+            width: 16.2rem;
+            margin-left: .8rem;
+        }
+
+        &--icon {
+            height: 1.6rem;
+        }
+    }
+
+    &__button {
+        margin-left: 5.6rem;
+    }
+}
+
+.user-nav__item {
+    display: inline-flex;
+    &:not(:first-child) {
+        margin-left: 3.2rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $color-header-text;
+    }
+}
+
+.info-nav__item {
+    display: inline-flex;
+    &:not(:first-child) {
+        margin-left: 3.2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-header-text;
+        margin-left: .8rem;
+    }
+
+    &--telegram {
+        height: 1.6rem;
+    }
+}
+
+.divider {
+    height: 1px;
+    border: none;
+    background: $color-divider;
+}

@@ -1,0 +1,15 @@
+.boxes {
+    margin-top: 5.6rem;
+
+    &__box {
+        display: flex;
+
+        &--item {
+            background-color: #535353;
+            width: 42.4rem;
+            height: 51.2rem;
+            border-radius: 1.2rem;
+        }
+    }
+}
+
