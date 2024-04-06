@@ -3,27 +3,37 @@
     background-color: $color-white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 
+    @include respond(small) {
+        height: 6.4rem;
+    }
+
     &__logo-box {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
     }
 
     &__info {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
-    }
 
-    &__user-nav {
-        margin-left: 22.4rem;
+        border-top: 1px solid $color-divider;
+
+        @include respond(small) {
+            display: none;
+        }
     }
 
     &__info-time {
         display: inline-flex;
+        align-items: center;
         justify-content: center;
         color: $color-header-text;
-        margin-left: 64.7rem;
 
         p {
             width: 16.2rem;
@@ -36,7 +46,19 @@
     }
 
     &__button {
-        margin-left: 5.6rem;
+        margin-left: 5rem;
+
+        @include respond(medium) {
+            margin-left: 90%;
+        }
+
+        @include respond(small) {
+            margin-left: 14em;
+        }
+
+        @include respond(extra-small) {
+            display: none;
+        }
     }
 }
 
@@ -49,6 +71,10 @@
     a {
         text-decoration: none;
         color: $color-header-text;
+    }
+
+    @include respond(medium) {
+        display: none;
     }
 }
 
@@ -67,10 +93,4 @@
     &--telegram {
         height: 1.6rem;
     }
-}
-
-.divider {
-    height: 1px;
-    border: none;
-    background: $color-divider;
 }

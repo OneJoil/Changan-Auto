@@ -1,0 +1,16 @@
+.navigation {
+    display: none;
+
+    @include respond(medium) {
+        display: inline-block;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        text-align: center;
+        cursor: pointer;
+    }
+}

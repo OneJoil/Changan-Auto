@@ -14,7 +14,20 @@ body {
     box-sizing: border-box;
 }
 
-.grid {
-    width: 1300px;
+.container {
+    max-width: 1300px;
+    height: auto;
     margin: 0 auto;
+
+    @include respond(medium) {
+        max-width: 852px;
+    }
+
+    @include respond(small) {
+        max-width: 680px;
+    }
+
+    @include respond(extra-small) {
+        max-width: 335px;
+    }
 }

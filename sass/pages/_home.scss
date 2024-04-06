@@ -1,15 +1,65 @@
 .boxes {
-    margin-top: 5.6rem;
+    padding-top: 5.6rem;
 
     &__box {
-        display: flex;
-
         &--item {
             background-color: #535353;
             width: 42.4rem;
             height: 51.2rem;
             border-radius: 1.2rem;
         }
+
+        &--mini {
+            height: 25rem;
+
+            @include respond(medium) {
+                width: 42rem;
+                height: 23.3rem;
+            }
+
+            @include respond(small) {
+                width: 68rem;
+            }
+
+            @include respond(extra-small) {
+                width: 33.5rem;
+                height: 19.4rem;
+            }
+        }
     }
 }
 
+.flexbox-grid--large {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond(medium) {
+        display: none;
+    }
+}
+
+.flexbox-grid--medium {
+    display: none;
+    height: 47.8rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include respond(medium) {
+        display: flex;
+    }
+
+    @include respond(small) {
+        min-height: 96.8rem;
+    }
+
+    @include respond(extra-small) {
+        min-height: 81.2rem;
+    }
+
+}
+
+#grid-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

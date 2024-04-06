@@ -9,72 +9,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
     <title>Changan Auto</title>
 </head>
 <body>
     <header class="header">
-        <div class="grid">
-            <div class="header__logo-box">
-                <img src="img/main_logo.svg" alt="Logo" class="header__logo-img">
+        <div class="container">
+        <div class="header__logo-box">
+            <img src="img/main_logo.svg" alt="Logo" class="header__logo-img">
 
-                <nav class="header__user-nav">
-                    <ul>
-                        <li class="user-nav__item"><a href="#">Автомобили в наличии</a></li>
-                        <li class="user-nav__item"><a href="#">Спецпредложения</a></li>
-                        <li class="user-nav__item"><a href="#">Продать авто</a></li>
-                        <li class="user-nav__item"><a href="#">Контакты</a></li>
-                        <li class="user-nav__item"><a href="#">Сервис</a></li>
+            <nav class="header__user-nav">
+                <ul>
+                    <li class="user-nav__item"><a href="#">Автомобили в наличии</a></li>
+                    <li class="user-nav__item"><a href="#">Спецпредложения</a></li>
+                    <li class="user-nav__item"><a href="#">Продать авто</a></li>
+                    <li class="user-nav__item"><a href="#">Контакты</a></li>
+                    <li class="user-nav__item"><a href="#">Сервис</a></li>
 
-                        <button class="header__button btn btn--blue">Заказать звонок</button>
-                    </ul>
-                </nav>
+                    <button class="header__button btn btn--blue">Заказать звонок</button>
+                </ul>
+            </nav>
+
+            <div class="navigation">
+                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+                <label for="navi-toggle" class="navigation__button">
+                    <img src="img/icons/nav_icon.svg" alt="navigation">
+                </label>
             </div>
         </div>
 
-        <hr class="divider">
+        <div class="header__info">
+            <nav class="header__info-nav">
+                <ul>
+                    <li class="info-nav__item">
+                        <img class="info-nav__item--map" src="img/icons/map_icon.svg" alt="map_icon">
+                        <a href="#">Олимпийский просп., 5, стр. 1, Москва</a>
+                    </li>
+                    <li class="info-nav__item">
+                        <img class="info-nav__item--telegram" src="img/icons/telegram_icon.svg" alt="telegram_icon">
+                        <a href="#">Проложить маршрут</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <div class="grid">
-            <div class="header__info">
-                <nav class="header__info-nav">
-                    <ul>
-                        <li class="info-nav__item">
-                            <img class="info-nav__item--map" src="img/icons/map_icon.svg" alt="map_icon">
-                            <a href="#">Олимпийский просп., 5, стр. 1, Москва</a>
-                        </li>
-                        <li class="info-nav__item">
-                            <img class="info-nav__item--telegram" src="img/icons/telegram_icon.svg" alt="telegram_icon">
-                            <a href="#">Проложить маршрут</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="header__info-time">
-                    <img class="header__info-time--icon" src="img/icons/time_icon.svg" alt="time_icon">
-                    <p>9:00 - 21:00 (ежедневно)</p>
-                </div>
+            <div class="header__info-time">
+                <img class="header__info-time--icon" src="img/icons/time_icon.svg" alt="time_icon">
+                <p>9:00 - 21:00 (ежедневно)</p>
             </div>
+        </div>
         </div>
     </header>
 
 <main>
     <section class="boxes">
-        <div class="grid">
-            <h2 class="heading-secondary">
-                Теперь услуги дилерского центра Вы можете можете получить онлайн!
-            </h2>
 
-            <div class="boxes__box">
-                <div class="boxes__box--item">
-                    <h3 class="heading-tertiary">
-                        Диагностика автомобиля перед покупкой
-                    </h3>
-                    <p class="paragraph">
-                        Расскажем обо всех скрытых дефектах автомобиля с пробегом
-                    </p>
-                    <button class="btn btn--white">Записаться</button>
+        <div class="container">
+
+        <h2 class="heading-secondary">
+            Теперь услуги дилерского центра Вы можете можете получить онлайн!
+        </h2>
+
+        <div class="flexbox-grid--large">
+
+            <div class="boxes__box--item boxes__box--item-1">
+                <div class="img-box img-box--1">
+                    <img src="img/boxes/img-1.png" alt="" class="img-box__img">
                 </div>
-                <div class="boxes__box--item">
+                <h3 class="heading-tertiary">
+                    Диагностика автомобиля перед покупкой
+                </h3>
+                <p class="paragraph">
+                    Расскажем обо всех скрытых дефектах автомобиля с пробегом
+                </p>
+                <button class="btn btn--white">Записаться</button>
+            </div>
+
+            <div id="grid-column">
+
+                <div class="boxes__box--item boxes__box--item-2 boxes__box--mini">
+                    <div class="img-box img-box--2">
+                        <img src="img/boxes/img-2.png" alt="" class="img-box__img">
+                    </div>
                     <h3 class="heading-tertiary">
                         Онлайн показ автомобиля по видеосвязи
                     </h3>
@@ -83,7 +100,11 @@
                     </p>
                     <button class="btn btn--white">Оставить заявку</button>
                 </div>
-                <div class="boxes__box--item">
+    
+                <div class="boxes__box--item boxes__box--item-3 boxes__box--mini">
+                    <div class="img-box img-box--3">
+                        <img src="img/boxes/img-3.png" alt="" class="img-box__img">
+                    </div>
                     <h3 class="heading-tertiary">
                         Онлайн бронирование
                     </h3>
@@ -92,16 +113,80 @@
                     </p>
                     <button class="btn btn--white">Забронировать</button>
                 </div>
-                <div class="boxes__box--item">
-                    <h3 class="heading-tertiary">
-                        Онлайн оценка автомобиля с пробегом
-                    </h3>
-                    <p class="paragraph">
-                        Узнайте предварительную стоимость автомобиля за 1 мин, указав его параметры
-                    </p>
-                    <button class="btn btn--white">Оставить заявку</button>
-                </div>
+
             </div>
+
+            <div class="boxes__box--item boxes__box--item-4">
+                <div class="img-box img-box--4">
+                    <img src="img/boxes/img-4.png" alt="" class="img-box__img">
+                </div>
+                <h3 class="heading-tertiary">
+                    Онлайн оценка автомобиля с пробегом
+                </h3>
+                <p class="paragraph">
+                    Узнайте предварительную стоимость автомобиля за 1 мин, указав его параметры
+                </p>
+                <button class="btn btn--white">Оставить заявку</button>
+            </div>
+
+        </div>
+
+        <div class="flexbox-grid--medium">
+
+            <div class="boxes__box--item boxes__box--item-1 boxes__box--mini">
+                <div class="img-box img-box--1">
+                    <img src="img/boxes/img-1.png" alt="" class="img-box__img">
+                </div>
+                <h3 class="heading-tertiary">
+                    Диагностика автомобиля перед покупкой
+                </h3>
+                <p class="paragraph">
+                    Расскажем обо всех скрытых дефектах автомобиля с пробегом
+                </p>
+                <button class="btn btn--white">Записаться</button>
+            </div>
+
+
+            <div class="boxes__box--item boxes__box--item-2 boxes__box--mini">
+                <div class="img-box img-box--2">
+                    <img src="img/boxes/img-2--full.png" alt="" class="img-box__img">
+                </div>
+                <h3 class="heading-tertiary">
+                    Онлайн показ автомобиля по видеосвязи
+                </h3>
+                <p class="paragraph">
+                    Проведем онлайн-показ интересующего автомобиля в удобное для Вас время
+                </p>
+                <button class="btn btn--white">Оставить заявку</button>
+            </div>
+
+            <div class="boxes__box--item boxes__box--item-3 boxes__box--mini">
+                <div class="img-box img-box--3">
+                    <img src="img/boxes/img-3.png" alt="" class="img-box__img">
+                </div>
+                <h3 class="heading-tertiary">
+                    Онлайн бронирование
+                </h3>
+                <p class="paragraph">
+                    Забронируйте понравившийся автомобиль без визита в дилерский центр
+                </p>
+                <button class="btn btn--white">Забронировать</button>
+            </div>
+
+            <div class="boxes__box--item boxes__box--item-4 boxes__box--mini">
+                <div class="img-box img-box--4">
+                    <img src="img/boxes/img-4.png" alt="" class="img-box__img">
+                </div>
+                <h3 class="heading-tertiary">
+                    Онлайн оценка автомобиля с пробегом
+                </h3>
+                <p class="paragraph">
+                    Узнайте предварительную стоимость автомобиля за 1 мин, указав его параметры
+                </p>
+                <button class="btn btn--white">Оставить заявку</button>
+            </div>
+
+        </div>
         </div>
     </section>
 </main>

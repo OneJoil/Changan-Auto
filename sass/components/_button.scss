@@ -2,8 +2,6 @@
     &,
     &:link,
     &:visited {
-        width: 20.4rem;
-        height: 4rem;
         text-decoration: none;
         display: inline-block;
         border-radius: 1.2rem;
@@ -17,9 +15,24 @@
     &--blue {
         background-color: $color-button-blue;
         color: $color-grey-light;
+        width: 20.4rem;
+        height: 4rem;
 
         &:hover {
             background-color: $color-button-light-blue;
+        }
+    }
+
+    &--white {
+        margin-top: 3.2rem;
+        background: none;
+        border: 1px solid $color-white;
+        color: $color-grey-light;
+        width: 14.3rem;
+        height: 4.5rem;
+
+        &:hover {
+            background-color: $color-button-white;
         }
     }
 }
